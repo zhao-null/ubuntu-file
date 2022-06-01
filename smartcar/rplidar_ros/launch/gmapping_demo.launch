@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find rplidar_ros)/launch/gmapping.launch" />
+    
+    <!-- 启动rviz -->
+    <node pkg="rviz" type="rviz" name="rvia" args="-d $(find rplidar_ros)/rviz/rplidar.rviz" />
+</launch>
+

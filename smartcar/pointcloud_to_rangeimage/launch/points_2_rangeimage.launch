@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="pointcloud_to_rangeimage"  type="pointcloud_to_rangeimage_node"  name="pointcloud_to_rangeimage_node"  output="screen"></node>
+</launch>
