@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!--设置目标距离和角度-->
+  <arg name="target_distance" default="1.0" />
+  <arg name="target_angle" default="0" />
+  <node name="saver" pkg="simu_follower" type="save_trajectory.py" output="screen">
+    <param name="targetDis" value="$(arg target_distance)" type="double" />
+    <param name="targetAngle" value="$(arg target_angle)" type="double" />
+  </node>
+</launch>
+

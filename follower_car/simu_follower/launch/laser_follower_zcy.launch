@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!--设置目标距离和角度-->
+  <arg name="target_distance" default="1.0" />
+  <arg name="target_angle" default="0" />
+  <!--打开激光雷达并显示在RVIZ中-->
+  <!--include file="$(find rplidar_ros)/launch/trajectory_view.launch" /-->
+  <!--激光雷达特征提取，获取目标距离和角度-->
+  <node name="laser_tracker" pkg="simu_follower" type="laserTracker.py" output="screen">
+    <param name="targetDis" value="$(arg target_distance)" type="double" />
+    <param name="targetAngle" value="$(arg target_angle)" type="double" />
+  </node>
+  <!--根据距离角度设置cmd_vel消息中的值-->
+  <node name="follower" pkg="simu_follower" type="follower.py" output="screen">
+    <param name="maxSpeed" value="2.0" type="double" />
+    <param name="maxAngleSpeed" value="2.0" type="double" />
+    <param name="targetDis" value="$(arg target_distance)" type="double" />
+    <param name="targetAngle" value="$(arg target_angle)" type="double" />
+    <rosparam ns="PID_controller" command="load" file="$(find simu_follower)/parameters/PID_param.yaml" />
+  </node>
+</launch>

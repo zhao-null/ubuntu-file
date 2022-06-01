@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <node name='follower' pkg="simu_follower" type="follower.py" output="screen">
+    <param name='maxSpeed' value='0.3' type='double' />
+    <param name='maxAngleSpeed' value='0.6' type='double' />
+    <param name='targetDis' value='1.0' type='double' />
+    <param name='targetAngle' value='0' type='double' />
+    <rosparam ns='PID_controller' command='load' file='$(find simu_follower)/parameters/PID_param.yaml' />
+  </node>
+</launch>
+
