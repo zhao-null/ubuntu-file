@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find orchard_car)/launch/gazebo.launch"/>
+    <include file="$(find orchard_car)/launch/display.launch"/>
+</launch>

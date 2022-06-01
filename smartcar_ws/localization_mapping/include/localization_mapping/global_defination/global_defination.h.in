@@ -1,0 +1,14 @@
+/*
+ * @Description: 
+ * @Author: Zhao Chengyue
+ * @Date: 2021-09-08 10:48:00
+ */
+#ifndef LOCALIZATION_MAPPING_GLOBAL_DEFINATION_H_IN_
+#define LOCALIZATION_MAPPING_GLOBAL_DEFINATION_H_IN_
+
+#include <string>
+
+namespace localization_mapping {
+const std::string WORK_SPACE_PATH = "@WORK_SPACE_PATH@";
+}
+#endif

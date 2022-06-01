@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <node name='laser_tracker' pkg="simple_follower" type="laserTracker.py" output="screen">
+  </node>
+</launch>

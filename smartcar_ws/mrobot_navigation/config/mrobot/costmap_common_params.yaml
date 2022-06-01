@@ -1,0 +1,23 @@
+#这两个参数用来设置代价地图中障碍物的相关阀值
+obstacle_range: 2.0 #用来设置障碍物的最大范围，若设置为2.5，则表在2.5m范围内检测到的障碍信息才会在地图中更新
+raytrace_range: 2.5 #用来设置检测自由空间的最大范围，设置为3,.0，表示在3m的范围内机器人将根据传感器的信息清楚范围内的自由空间
+ 
+ 
+#footprint: [[0.175, 0.175], [0.175, -0.175], [-0.175, -0.175], [-0.175, 0.175]]
+#footprint_inflation: 0.01
+robot_radius: 0.175
+inflation_radius: 0.1  #这个是机器人和障碍物保持的最小安全距离为0.1m以上
+#这个footprint参数设置机器人在二维地图上的占用的面积，参数以机器人的中心作为坐标原点
+#要是机器人外形是圆形，则需要设置机器人的外形半径robot_radius
+ 
+ 
+max_obstacle_height: 0.6
+min_obstacle_height: 0.0
+#这两个参数描述障碍物的最大高度和最小高度
+ 
+observation_sources: scan #这里以激光雷达为例
+scan: {data_type: LaserScan, topic: /scan, marking: true, clearing: true, expected_update_rate: 0}
+#observation_sources参数列出了代价地图需要关注的所有的传感器信息，每个传感器信息都会在后面列出来
+#data_type表示激光数据或者是点云数据使用的消息
+#topic：表示传感器发布的话题的名称
+#marking和clearing：表示是否需要使用传感器的实时信息来添加或清除代价地图中的障碍物信息

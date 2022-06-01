@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="orchard_car">
+  <link name="dummy">
+   </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0028375 0.0007996 0.004345"
+        rpy="0 0 0" />
+      <mass
+        value="97.424" />
+      <inertia
+        ixx="3.7064"
+        ixy="0.023148"
+        ixz="0.0022243"
+        iyy="4.5327"
+        iyz="-0.0025154"
+        izz="6.3559" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orchard_car/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orchard_car/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="dummy_joint" type="fixed">
+     <parent link="dummy"/>
+     <child link="base_link"/>
+   </joint>
+  <link
+    name="Wheel_LF_Link">
+    <inertial>
+      <origin
+        xyz="2.7756E-17 8.8935E-05 0"
+        rpy="0 0 0" />
+      <mass
+        value="4.1316" />
+      <inertia
+        ixx="0.042953"
+        ixy="2.5755E-18"
+        ixz="-6.2831E-22"
+        iyy="0.083026"
+        iyz="9.7041E-18"
+        izz="0.042953" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orchard_car/meshes/Wheel_LF_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orchard_car/meshes/Wheel_LF_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wheel_LF_Joint"
+    type="continuous">
+    <origin
+      xyz="0.2325 0.318 -0.035"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Wheel_LF_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Wheel_RF_Link">
+    <inertial>
+      <origin
+        xyz="2.7756E-17 -8.8935E-05 0"
+        rpy="0 0 0" />
+      <mass
+        value="4.1316" />
+      <inertia
+        ixx="0.042953"
+        ixy="2.5755E-18"
+        ixz="6.2831E-22"
+        iyy="0.083026"
+        iyz="-9.7041E-18"
+        izz="0.042953" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orchard_car/meshes/Wheel_RF_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orchard_car/meshes/Wheel_RF_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RF_Joint"
+    type="continuous">
+    <origin
+      xyz="0.2325 -0.318 -0.035"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Wheel_RF_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Wheel_LB_Link">
+    <inertial>
+      <origin
+        xyz="0 8.8935E-05 0"
+        rpy="0 0 0" />
+      <mass
+        value="4.1316" />
+      <inertia
+        ixx="0.042953"
+        ixy="2.5755E-18"
+        ixz="-6.2831E-22"
+        iyy="0.083026"
+        iyz="9.7041E-18"
+        izz="0.042953" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orchard_car/meshes/Wheel_LB_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orchard_car/meshes/Wheel_LB_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wheel_LB_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.2325 0.318 -0.035"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Wheel_LB_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Wheel_RB_Link">
+    <inertial>
+      <origin
+        xyz="-2.7756E-17 -8.8935E-05 0"
+        rpy="0 0 0" />
+      <mass
+        value="4.1316" />
+      <inertia
+        ixx="0.042953"
+        ixy="2.5685E-18"
+        ixz="-2.7475E-22"
+        iyy="0.083026"
+        iyz="-9.7041E-18"
+        izz="0.042953" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orchard_car/meshes/Wheel_RB_Link.STL" />
+      </geometry>
+      <material
+        name="orchard_car">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orchard_car/meshes/Wheel_RB_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Wheel_RB_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.2325 -0.318 -0.035"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Wheel_RB_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Laser_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.01" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orchard_car/meshes/Laser_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.4117 0.7059 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://orchard_car/meshes/Laser_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Laser_Joint"
+    type="fixed">
+    <origin
+      xyz="0.015 0 0.419"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Laser_Link" />
+    <axis
+      xyz="-0.1513 0 0.98849" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <gazebo reference="base_link">
+   <material>Gazebo/Yellow</material>
+  </gazebo>
+  <gazebo reference="Wheel_LF_Link">
+   <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="Wheel_RF_Link">
+   <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="Wheel_LB_Link">
+   <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="Wheel_RB_Link">
+   <material>Gazebo/Black</material>
+  </gazebo>
+  <!--gazebo reference="Laser_Link">
+   <material>Gazebo/Blue</material>
+  </gazebo-->
+  <gazebo reference="Laser_Link">
+    <material>Gazebo/Blue</material>
+    <sensor type="ray" name="velodyne-VLP16">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>1800</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.1415926535897931</min_angle>
+            <max_angle>3.1415926535897931</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>32</samples>
+            <resolution>1</resolution>
+            <min_angle>-0.261799387799149436</min_angle>
+            <max_angle>0.261799387799149436</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.30</min>
+          <max>200.0</max>
+          <resolution>0.003</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_velodyne_laser.so">
+        <topicName>/velodyne_points</topicName>
+        <frameName>Laser_Link</frameName>
+        <organize_cloud>false</organize_cloud>
+        <min_range>0.40</min_range>
+        <max_range>200.0</max_range>
+        <gaussianNoise>0.008</gaussianNoise>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <!--  robot controller  -->
+  <gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>50.0</updateRate>
+    <robotNamespace></robotNamespace>
+    <leftFrontJoint>Wheel_LF_Joint</leftFrontJoint>
+    <rightFrontJoint>Wheel_RF_Joint</rightFrontJoint>
+    <leftRearJoint>Wheel_LB_Joint</leftRearJoint>
+    <rightRearJoint>Wheel_RB_Joint</rightRearJoint> 
+    <wheelSeparation>0.480</wheelSeparation>
+    <wheelDiameter>0.35</wheelDiameter>
+    <commandTopic>cmd_vel</commandTopic>
+    <odometryTopic>odom</odometryTopic>
+    <robotBaseFrame>base_footprint</robotBaseFrame>
+    <odometryFrame>odom</odometryFrame>
+    <torque>150</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>1</broadcastTF>
+    <covariance_x>0.0001</covariance_x>
+    <covariance_y>0.0001</covariance_y>
+    <covariance_yaw>0.01</covariance_yaw>
+  </plugin>
+</gazebo>
+</robot>
+

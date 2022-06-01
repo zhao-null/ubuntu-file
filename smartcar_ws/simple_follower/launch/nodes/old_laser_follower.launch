@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <include file='$(find rplidar_ros)/launch/view_rplidar.launch' />
+  <include file='$(find simple_follower)/launch/nodes/laserTracker.launch' />
+  <include file='$(find simple_follower)/launch/nodes/follower.launch' />
+</launch>
