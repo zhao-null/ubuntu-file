@@ -1,0 +1,14 @@
+#use_cache "/home/zcy/opencv-3.4.14/.cache"
+#do_unpack "ippicv_2020_lnx_intel64_20191018_general.tgz" "7421de0095c7a39162ae13a6098782f9" "https://raw.githubusercontent.com/opencv/opencv_3rdparty/a56b6ac6f030c312b2dce17430eef13aed9af274/ippicv/ippicv_2020_lnx_intel64_20191018_general.tgz" "/home/zcy/opencv-3.4.14/build/3rdparty/ippicv"
+#cmake_download "/home/zcy/opencv-3.4.14/.cache/ippicv/7421de0095c7a39162ae13a6098782f9-ippicv_2020_lnx_intel64_20191018_general.tgz" "https://raw.githubusercontent.com/opencv/opencv_3rdparty/a56b6ac6f030c312b2dce17430eef13aed9af274/ippicv/ippicv_2020_lnx_intel64_20191018_general.tgz"
+#try 1
+#   Trying 0.0.0.0...
+# TCP_NODELAY set
+# connect to 0.0.0.0 port 443 failed: Connection refused
+#   Trying ::...
+# TCP_NODELAY set
+# connect to :: port 443 failed: Connection refused
+# Failed to connect to raw.githubusercontent.com port 443: Connection refused
+# Closing connection 0
+# 
+
